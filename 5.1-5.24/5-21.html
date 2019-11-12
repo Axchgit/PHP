@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			//将每个<span>用<p>包裹
+			$("span").wrap("<p></p>");
+			//将所有<p>用<div>包裹
+			$("p").wrapAll('<div></div>');
+			//将每个<span>的内容用<b>包裹
+			$("span").wrapInner('<b></b>');
+		});
+	</script>
+</head>
+<body>
+	<span>吴承恩</span><span>施耐庵</span>
+</body>
+</html>

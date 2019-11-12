@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		.rect{width:200px;height:50px;border:1px solid #000;}
+		.bold{font-weight:bold;}
+		.center{text-align:center;line-height:50px;}
+	</style>
+	<script>
+		function f1(){
+			$("div").addClass("center bold");
+		}
+		function f2(){
+			$("div").removeClass("center");
+		}
+		function f3(){
+			$("div").toggleClass("bold");
+		}
+	</script>
+</head>
+<body>
+	<div class="rect">传智播客</div>
+	<input type="button" value="添加样式" onclick="f1()" />
+	<input type="button" value="移除样式" onclick="f2()" />
+	<input type="button" value="样式切换" onclick="f3()" />
+</body>
+</html>

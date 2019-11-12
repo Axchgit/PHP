@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			//主动替换
+			$("#b01").replaceAll("#a01");
+			$("<li>杜甫</li>").replaceAll("#a02");
+			//被动替换
+			$("#a03").replaceWith($("#b02"));
+			$("#a04").replaceWith("<li>李清照</li>");
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li id="a01">刘备</li><li id="a02">张飞</li>
+		<li id="a03">关羽</li><li id="a04">诸葛亮</li>
+	</ul>
+	<ul>
+		<li id="b01">李白</li><li id="b02">欧阳修</li>
+	</ul>
+</body>
+</html>

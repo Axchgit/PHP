@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		table{border-collapse:collapse;width:80%;}
+	</style>
+	<script>
+		function func(){
+			$("table tr:odd").css("background-color","#ddd");
+		}
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr><th>A</th><th>B</th><th>C</th></tr>
+		<tr><td>1</td><td>1</td><td>1</td></tr>
+		<tr><td>2</td><td>2</td><td>2</td></tr>
+		<tr><td>3</td><td>3</td><td>3</td></tr>
+		<tr><td>4</td><td>4</td><td>4</td></tr>
+		<tr><td>5</td><td>5</td><td>5</td></tr>
+	</table>
+	<input type="button" value="触发" onclick="func()" />
+</body>
+</html>

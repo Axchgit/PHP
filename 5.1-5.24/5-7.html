@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		function func(){
+			$("[value*=球]").css("background-color","#ddd");
+			$("input[value!=滑冰][value!=游泳]").css("border","0");
+		}
+	</script>
+</head>
+<body>
+	<input type="text" value="篮球" />
+	<input type="text" value="足球" />
+	<input type="text" value="游泳" />
+	<input type="text" value="滑冰" />
+	<input type="text" />
+	<input type="text" value="乒乓球" />
+	<input type="submit" value="触发" onclick="func()" />
+</body>
+</html>

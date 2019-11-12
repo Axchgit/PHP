@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			//1.设置文本框
+			$(":text").val("itcast");
+			//2.设置单选按钮选中情况
+			$(":radio").val(["girl"]);
+			//3.设置多选按钮选中情况
+			$(":checkbox").val(["篮球","足球"]);
+			//4.设置列表框选中情况
+			$("select").val(["高中","大学"]);
+		});
+		function func(){
+			//1.获取文本框
+			console.log($(":text").val());
+			//2.获取单选按钮
+			console.log($(":radio:checked").val());
+			//3.获取多选框
+			$(":checkbox:checked").each(function(){
+				console.log($(this).val());
+			});
+			//4.获取列表框
+			console.log($("select").val());
+		}
+	</script>
+</head>
+<body>
+	<p>文本框：<input type="text" value="" /></p>
+	<p>单选按钮：
+	<input type="radio" value="boy" />boy
+	<input type="radio" value="girl" />girl</p>
+	<p>多选框：
+	<input type="checkbox" value="篮球" />篮球
+	<input type="checkbox" value="足球" />足球
+	<input type="checkbox" value="网球" />网球</p>
+	<p>列表框：
+	<select multiple="multiple">
+		<option value="小学">小学</option>
+		<option value="初中">初中</option>
+		<option value="高中">高中</option>
+		<option value="大学">大学</option>
+	</select></p>
+	<input type="submit" value="提交" onclick="func()" />
+</body>
+</html>

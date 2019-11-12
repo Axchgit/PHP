@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		.box{ width:100px;height:50px;background-color:#ccc; }
+	</style>
+	<script>
+		function func(){
+			$(".box").css("background-color","blue");
+		}
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+	<input type="button" value="触发" onclick="func()">
+</body>
+</html>

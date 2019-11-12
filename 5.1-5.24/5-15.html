@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		span{font-weight:bold;}
+	</style>
+	<script>
+		$(function(){
+			//1.获得HTML内容
+			console.log($("#get_html").html());
+			//2.获得文本内容
+			console.log($("#get_txt").text());
+			//3.设置HTML内容
+			$("#set_html").html("<span>乐不</span>思蜀");
+			//4.设置文本内容
+			$("#set_txt").text("<span>过河</span>拆桥");
+		});
+	</script>
+</head>
+<body>
+	<div id="get_html"><span>桃园</span>结义</div>
+	<div id="get_txt"><span>无中</span>生有</div>
+	<div id="set_html"></div>
+	<div id="set_txt"></div>
+</body>
+</html>

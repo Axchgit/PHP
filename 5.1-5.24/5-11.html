@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("div").each(function(){
+				console.log($(this).css("width"));
+			});
+		});
+	</script>
+</head>
+<body>
+	<div style="width:50px;">足球</div>
+	<div style="width:60px;">篮球</div>
+	<div style="width:70px;">网球</div>
+	<div style="width:80px;">排球</div>
+</body>
+</html>

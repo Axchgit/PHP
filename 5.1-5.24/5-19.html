@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			//删除所有子节点
+			$("#delete p").empty();
+			//删除指定元素
+			$("#delete div").remove();
+			//删除class=title的div元素
+			$("div").remove(".title");
+		});
+	</script>
+</head>
+<body>
+	<div class="title">节点删除</div>
+	<div id="delete">
+		<p>刘备</p><p>张飞</p>
+		<p>关羽</p><p>诸葛亮</p>
+		<div>李白</div><div>杜甫</div>
+		<div>欧阳修</div><div>李清照</div>
+	</div>
+</body>
+</html>

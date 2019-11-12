@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		body{width:50%;}
+		.left{float:left;}
+		.right{float:right;}
+	</style>
+	<script>
+		$(function(){
+		//----父子节点
+			//后置追加
+			$("#t1").append("<li>3</li>");
+			//前置追加（移动已有节点）
+			$("#t1").prepend($("#old li:eq(1)"));
+			//被动后置追加
+			$("<li>4</li>").appendTo("#t1");
+			//被动前置追加（移动已有节点）
+			$($("#old li:eq(0)")).prependTo("#t1");
+		//----兄弟节点
+			//后置追加
+			$("#t2").after("<li>E</li>");
+			//前置追加
+			$("#t2").before("<li>A</li>");
+			//被动后置追加
+			$("<li>D</li>").insertAfter("#t2");
+			//被动前置追加
+			$("<li>B</li>").insertBefore("#t2");
+		});
+	</script>
+</head>
+<body>
+	<ul id="old">
+		<li>1</li><li>2</li>
+	</ul>
+	<ul class="left" id="t1"></ul>
+	<ul class="right"><li id="t2">C</li></ul>
+</body>
+</html>

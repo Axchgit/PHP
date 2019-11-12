@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		div{width:100%;height:20px;border:1px solid #000;margin:5px auto;}
+	</style>
+	<script>
+		function func(){
+			$("div:contains('结义')").css("font-weight","bold");
+			$("div:empty").css("background-color","#ddd");
+			$("div:has(span)").css("width","50%");
+			$("div:parent").css("border","1px dotted #000");
+		}
+	</script>
+</head>
+<body>
+	<div>东山再起</div>
+	<div>桃园结义</div>
+	<div>    </div>
+	<div><img /></div>
+	<div></div>
+	<div><span></span></div>
+	<input type="button" value="触发" onclick="func()" />
+</body>
+</html>

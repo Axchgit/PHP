@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			//添加事件（当点击时字体加粗）
+			$(".luo").click(function(){
+				$(this).css("font-weight","bold");
+			});
+			//复制节点，不复制事件
+			$(".luo:eq(0)").clone().appendTo("ol");
+			//复制节点，复制事件
+			$(".luo:eq(0)").clone(true).appendTo("ol");
+		});
+	</script>
+</head>
+<body>
+	<ol>
+		<li class="luo">罗贯中</li><li>曹雪芹</li>
+	</ol>
+</body>
+</html>

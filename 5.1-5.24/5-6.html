@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		div{width:100%;height:20px;border:1px solid #000;margin:5px auto;}
+	</style>
+	<script>
+		$(function(){
+			$(":hidden").css("margin","0");
+			$(":visiable").css("padding","0");
+		});
+	</script>
+</head>
+<body>
+	<div>测试</div>
+	<input type="hidden" />
+	<div style="display:none">测试</div>
+	<div style="visibility:hidden">测试</div>
+</body>
+</html>
