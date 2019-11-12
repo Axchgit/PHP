@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<style>
+		ul{list-style:none;padding:0;}
+		li{margin-bottom:5px;}
+		table{min-width:200px;border-collapse:collapse;margin-top:20px;}
+	</style>
+	<script>
+		$(function(){
+			//设置全局ajax
+			$.ajaxSetup({
+				url:"./comment.php",
+				type:"POST",
+				dataType:"json",
+				success:comment_add
+			});
+			//添加按钮单击事件
+			$(":button").click(comment_send);
+			//获得默认数据
+			$.ajax();
+		});
+		function comment_send(){
+			var name = $("#input_name").val()
+			var comment = $("#input_comment").val();
+			//提交与获取数据
+			$.ajax({data:{name:name,comment:comment}});
+		}
+		function comment_add(data){
+			html = "<tr><td>"+data.name+"</td><td>"+data.comment+"</td></tr>"
+			$("table").append(html);
+		}
+	</script>
+</head>
+<body>
+	<div>Ajax无刷新评论</div>
+	<ul>
+		<li>姓名：<input id="input_name" type="text" /></li>
+		<li>评论：<input id="input_comment" /></li>
+	</ul>
+	<input type="button" value="发表评论" />
+	<table border="1"></table>
+</body>
+</html>
